@@ -4,7 +4,7 @@
 --
 ---------------------------------------------------------------------------------
 
-local sceneName = "main"
+local sceneName = ...
 
 local composer = require( "composer" )
 
@@ -17,6 +17,7 @@ local nextSceneButton
 
 function scene:create( event )
     local sceneGroup = self.view
+    local globalState = event.params
 
     -- Called when the scene's view does not exist
     -- 
