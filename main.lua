@@ -17,7 +17,7 @@ local globalState = {
 }
 
 -- load scene1
-composer.gotoScene( "scene1", globalState )
+composer.gotoScene( "mainscene", globalState )
 
 -- Add any objects that should appear on all scenes below (e.g. tab bar, hud, etc)
 

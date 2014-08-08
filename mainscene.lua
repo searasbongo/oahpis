@@ -31,35 +31,12 @@ function scene:show( event )
 
     if phase == "will" then
         -- Called when the scene is still off screen and is about to move on screen
-        local title = self:getObjectByTag( "Title" )
-        title.x = display.contentWidth / 2
-        title.y = display.contentHeight / 2
-        title.size = display.contentWidth / 10
-        local goToScene2Btn = self:getObjectByTag( "GoToScene2Btn" )
-        goToScene2Btn.x = display.contentWidth - 95
-        goToScene2Btn.y = display.contentHeight - 35
-        local goToScene2Text = self:getObjectByTag( "GoToScene2Text" )
-        goToScene2Text.x = display.contentWidth - 92
-        goToScene2Text.y = display.contentHeight - 35
+
     elseif phase == "did" then
         -- Called when the scene is now on screen
         -- 
         -- INSERT code here to make the scene come alive
         -- e.g. start timers, begin animation, play audio, etc
-        
-        -- we obtain the object by id from the scene's object hierarchy
-        nextSceneButton = self:getObjectByTag( "GoToScene2Btn" )
-        if nextSceneButton then
-        	-- touch listener for the button
-        	function nextSceneButton:touch ( event )
-        		local phase = event.phase
-        		if "ended" == phase then
-        			composer.gotoScene( "scene2", { effect = "fade", time = 300 } )
-        		end
-        	end
-        	-- add the touch event listener to the button
-        	nextSceneButton:addEventListener( "touch", nextSceneButton )
-        end
         
     end 
 end
@@ -75,9 +52,7 @@ function scene:hide( event )
         -- e.g. stop timers, stop animation, unload sounds, etc.)
     elseif phase == "did" then
         -- Called when the scene is now off screen
-		if nextSceneButton then
-			nextSceneButton:removeEventListener( "touch", nextSceneButton )
-		end
+
     end 
 end
 
