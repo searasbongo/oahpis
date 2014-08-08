@@ -1,10 +1,10 @@
 ---------------------------------------------------------------------------------
 --
--- scene.lua
+-- An interactive image
 --
 ---------------------------------------------------------------------------------
 
-local sceneName = ...
+local sceneName = "govva"
 
 local composer = require( "composer" )
 
@@ -22,6 +22,11 @@ function scene:create( event )
     -- 
     -- INSERT code here to initialize the scene
     -- e.g. add display objects to 'sceneGroup', add touch listeners, etc
+
+    local background = display.newImageRect( " images/01-rieban.png", 570, 360 )
+    sceneGroup:insert( background )
+
+    --TODO: load audio files for first image
 end
 
 function scene:show( event )

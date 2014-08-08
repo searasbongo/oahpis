@@ -5,7 +5,7 @@ application = {
 		height = 1920, 
 		scale = "letterBox",
 		fps = 30,
-		
+
         imageSuffix = {
 		    --Default is 1920x1080 (New Android phones, such as Galaxy S4)
 
